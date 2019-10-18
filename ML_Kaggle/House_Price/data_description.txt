@@ -1,4 +1,4 @@
-MSSubClass: Identifies the type of dwelling involved in the sale.	
+MSSubClass: Identifies the type of dwelling involved in the sale.	# convert to categorical
 
         20	1-STORY 1946 & NEWER ALL STYLES
         30	1-STORY 1945 & OLDER
@@ -32,25 +32,25 @@ LotFrontage: Linear feet of street connected to property
 
 LotArea: Lot size in square feet
 
-Street: Type of road access to property
+Street: Type of road access to property # can be converted to ordinal
 
        Grvl	Gravel	
        Pave	Paved
        	
-Alley: Type of alley access to property
+Alley: Type of alley access to property # can be converted to ordinal
 
        Grvl	Gravel
        Pave	Paved
-       NA 	No alley access
+       NA 	No alley access # can be converted to ordinal
 		
-LotShape: General shape of property
+LotShape: General shape of property # can be converted to ordinal
 
        Reg	Regular	
        IR1	Slightly irregular
        IR2	Moderately Irregular
        IR3	Irregular
        
-LandContour: Flatness of the property
+LandContour: Flatness of the property 
 
        Lvl	Near Flat/Level	
        Bnk	Banked - Quick and significant rise from street grade to building
@@ -72,7 +72,7 @@ LotConfig: Lot configuration
        FR2	Frontage on 2 sides of property
        FR3	Frontage on 3 sides of property
 	
-LandSlope: Slope of property
+LandSlope: Slope of property # can be converted to ordinal
 		
        Gtl	Gentle slope
        Mod	Moderate Slope	
@@ -177,7 +177,7 @@ OverallCond: Rates the overall condition of the house
 		
 YearBuilt: Original construction date
 
-YearRemodAdd: Remodel date (same as construction date if no remodeling or additions)
+YearRemodAdd: Remodel date (same as construction date if no remodeling or additions) # create features - remodeling done or not, how many years back remodling done?, 
 
 RoofStyle: Type of roof
 
@@ -249,7 +249,7 @@ MasVnrType: Masonry veneer type
 	
 MasVnrArea: Masonry veneer area in square feet
 
-ExterQual: Evaluates the quality of the material on the exterior 
+ExterQual: Evaluates the quality of the material on the exterior # convert to nominal
 		
        Ex	Excellent
        Gd	Good
@@ -257,7 +257,7 @@ ExterQual: Evaluates the quality of the material on the exterior
        Fa	Fair
        Po	Poor
 		
-ExterCond: Evaluates the present condition of the material on the exterior
+ExterCond: Evaluates the present condition of the material on the exterior # convert to nominal
 		
        Ex	Excellent
        Gd	Good
@@ -274,7 +274,7 @@ Foundation: Type of foundation
        Stone	Stone
        Wood	Wood
 		
-BsmtQual: Evaluates the height of the basement
+BsmtQual: Evaluates the height of the basement # convert to nominal
 
        Ex	Excellent (100+ inches)	
        Gd	Good (90-99 inches)
@@ -283,7 +283,7 @@ BsmtQual: Evaluates the height of the basement
        Po	Poor (<70 inches
        NA	No Basement
 		
-BsmtCond: Evaluates the general condition of the basement
+BsmtCond: Evaluates the general condition of the basement # convert to nominal
 
        Ex	Excellent
        Gd	Good
@@ -294,7 +294,7 @@ BsmtCond: Evaluates the general condition of the basement
 	
 BsmtExposure: Refers to walkout or garden level walls
 
-       Gd	Good Exposure
+       Gd	Good Exposure # convert to nominal
        Av	Average Exposure (split levels or foyers typically score average or above)	
        Mn	Mimimum Exposure
        No	No Exposure
